@@ -1,20 +1,22 @@
-$(document).ready(function()
+$(document).ready(function(){
 
   var succ = $(".next");
-
+  var primo = $("img.first");
 
   succ.click(
     function (){
       var img = $("img.active");
       img.removeClass("active");
-      var primo = $("img.first");
-      
+
+
       if(img.hasClass("last")){
         var imgSucc = primo;
       } else {
-        imgSucc = img.next()
+        var imgSucc = img.next();
       }
+
       imgSucc.addClass("active");
+
     }
   );
 
